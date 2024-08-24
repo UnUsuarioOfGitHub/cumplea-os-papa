@@ -104,10 +104,12 @@
         <p>&copy; 2024 Juan David Romero Pemberthy. Todos los derechos reservados.</p>
     </div>
 
-    <!-- Música de fondo -->
-    <audio autoplay loop>
+    <audio id="background-audio" loop>
         <source src="cancion.mp3" type="audio/mp3">
+        Tu navegador no soporta la reproducción de audio.
     </audio>
+    <button onclick="document.getElementById('background-audio').play()">Reproducir Música</button>
+
 
     <!-- Confeti -->
     <canvas id="confetti"></canvas>
