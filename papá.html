@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños, Papá!</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #faf3e0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #ff6347;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .intro p {
+            font-size: 1.2em;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .gallery img {
+            width: 30%;
+            border-radius: 15px;
+            margin: 10px;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .message {
+            background-color: #ffebcd;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .message p {
+            font-size: 1.5em;
+            color: #ff6347;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        #confetti {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>¡Feliz Cumpleaños, Papá!</h1>
+    </header>
+    <div class="container">
+        <div class="intro">
+            <p>Hoy es un día muy especial, ¡celebramos a la persona más importante de nuestras vidas!</p>
+        </div>
+
+        <div class="gallery">
+            <img src="https://raw.githubusercontent.com/UnUsuarioOfGitHub/cumplea-os-papa/main/descarga%20(1).jpg" alt="Foto 1">
+            <img src="https://raw.githubusercontent.com/UnUsuarioOfGitHub/cumplea-os-papa/main/descarga%20(2).jpg" alt="Foto 2">
+            <img src="https://raw.githubusercontent.com/UnUsuarioOfGitHub/cumplea-os-papa/main/descarga.jpg" alt="Foto 3">
+        </div>
+
+        <div class="message">
+            <p>Gracias por ser un padre increíble, un amigo fiel y un ejemplo a seguir. ¡Te amamos con todo el corazón!</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Juan David Romero Pemberthy. Todos los derechos reservados.</p>
+    </div>
+
+    <!-- Música de fondo -->
+    <audio autoplay loop>
+        <source src="FelizCumpleaños.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Confeti -->
+    <canvas id="confetti"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script>
+        // Inicia el confeti al cargar la página
+        confetti({
+            particleCount: 150,
+            spread: 70,
+            origin: { y: 0.6 }
+        });
+    </script>
+</body>
+</html>
+
